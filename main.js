@@ -1,10 +1,3 @@
-function Get(yourUrl){
-    var Httpreq = new XMLHttpRequest(); // a new request
-    Httpreq.open("GET",yourUrl,false);
-    Httpreq.send(null);
-    return Httpreq.responseText;
-}
-
 function fetchComics () {
   var comics = [
       "https://imgs.xkcd.com/comics/equations.png",
@@ -32,7 +25,4 @@ function fetchComics () {
   var tcl = document.getElementById('totalcomicsloaded');
 
   tcl.innerHTML = 'Total comics loaded ' + comics.length;
-
-  var json_obj = JSON.parse(Get("https://xkcd.com/info.0.json"));
-  alert("test");
-}
+ }
